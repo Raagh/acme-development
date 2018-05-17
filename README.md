@@ -1,33 +1,27 @@
-# ACME Solutions
+# ACME
 
-This is a fake website and api created for a fake software development company used to test my skills in modern web development.
+This is the website for ACME Solutions, a fake consultancy company.
 
-## Getting Started
+## Development server
 
-git clone www.github.com/Raagh/acme-solutions
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
--- FOR WEB --
-cd acme-solutions/web
-npm install
-npm start
+## Code scaffolding
 
-### Prerequisites
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Install
+## Build
 
-```
-Node.js
-Google Chrome
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running the tests
+## Running unit tests
 
-Explain how to run the automated tests for this system
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### Break down into end to end tests
+## Running end-to-end tests
 
-Explain what these tests test and why
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-```
-Give an example
-```
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
