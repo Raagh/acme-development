@@ -11,20 +11,10 @@
 
 <section id="boxes">
   <div class="container">
-    <div class="box">
-      <img src="assets/img/logo_html.png" alt="">
-      <h3>Html5 Markup</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia mauris id dui finibus dignissim.</p>
-    </div>
-    <div class="box">
-      <img src="assets/img/logo_css.png" alt="">
-      <h3>CSS3</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia mauris id dui finibus dignissim.</p>
-    </div>
-    <div class="box">
-      <img src="assets/img/logo_brush.png" alt="">
-      <h3>Graphic Design</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacinia mauris id dui finibus dignissim.</p>
+    <div class="box" *ngFor="let box of boxes">
+      <img src="{{box.link}}" lt="">
+      <h3>{{box.title}}</h3>
+      <p>{{box.text}}</p>
     </div>
   </div>
 </section>

@@ -4,34 +4,11 @@
     <article id="main-col">
       <h1 class="page-title">Services</h1>
       <ul id="services">
-        <li>
-          <h3>Website Design</h3>
-          <p> Aenean quis velit urna. Proin in tortor dictum, congue eros id, rhoncus libero. Proin bibendum elit erat, a eleifend
-            lorem bibendum eu. Donec blandit lorem semper tempus tincidunt. Aenean finibus nec magna vitae consectetur. Phasellus
-            mi leo, dapibus vel ante dictum, molestie aliquam metus. Duis sit amet dictum felis, et rhoncus est. Morbi et
-            ultricies eros. Suspendisse at nibh eget ex placerat lacinia.</p>
+        <li *ngFor="let service of services">
+          <h3>{{service.title}}</h3>
+          <p>{{service.text}}</p>
           <p>
-            Pricing: $1000 - $3000
-          </p>
-        </li>
-        <li>
-          <h3>Website Manteinance</h3>
-          <p> Aenean quis velit urna. Proin in tortor dictum, congue eros id, rhoncus libero. Proin bibendum elit erat, a eleifend
-            lorem bibendum eu. Donec blandit lorem semper tempus tincidunt. Aenean finibus nec magna vitae consectetur. Phasellus
-            mi leo, dapibus vel ante dictum, molestie aliquam metus. Duis sit amet dictum felis, et rhoncus est. Morbi et
-            ultricies eros. Suspendisse at nibh eget ex placerat lacinia.</p>
-          <p>
-            Pricing: $1000 - $3000
-          </p>
-        </li>
-        <li>
-          <h3>Website Host</h3>
-          <p> Aenean quis velit urna. Proin in tortor dictum, congue eros id, rhoncus libero. Proin bibendum elit erat, a eleifend
-            lorem bibendum eu. Donec blandit lorem semper tempus tincidunt. Aenean finibus nec magna vitae consectetur. Phasellus
-            mi leo, dapibus vel ante dictum, molestie aliquam metus. Duis sit amet dictum felis, et rhoncus est. Morbi et
-            ultricies eros. Suspendisse at nibh eget ex placerat lacinia.</p>
-          <p>
-            Pricing: $1000 - $3000
+            Pricing: {{service.pricing}}
           </p>
         </li>
       </ul>
@@ -58,5 +35,4 @@
     </aside>
   </div>
 </section>
-
 <app-footer></app-footer>
