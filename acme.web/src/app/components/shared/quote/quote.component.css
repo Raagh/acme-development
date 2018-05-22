@@ -1,0 +1,5 @@
+#sidebar .quote input,
+#sidebar .quote textarea {
+  width: 90%;
+  padding: 5px;
+}

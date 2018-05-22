@@ -2,8 +2,8 @@
   <div class="container">
     <h1>Subscribe to our newsletter</h1>
     <form>
-      <input type="email" placeholder="Enter Email...">
-      <button type="submit" class="button">Subscribe</button>
+      <input type="email" name="mailInput" [(ngModel)]="mail" placeholder="Enter Email...">
+      <button type="submit" (click)="subscribe()" class="button">Subscribe</button>
     </form>
   </div>
 </section>

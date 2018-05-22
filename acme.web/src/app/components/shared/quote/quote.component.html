@@ -1,0 +1,20 @@
+<aside id="sidebar">
+  <div class="dark">
+    <h3>Get a Quote</h3>
+    <form class="quote">
+      <div>
+        <label>Name</label>
+        <input type="text" placeholder="Name" name="nameInput" [(ngModel)]="name" value="{{name}}">
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="email" placeholder="Email" name="mailInput" [(ngModel)]="mail" value="{{mail}}">
+      </div>
+      <div>
+        <label>Message</label>
+        <textarea type="text" placeholder="Message" name="messageInput" [(ngModel)]="message" value="{{message}}"></textarea>
+      </div>
+      <button type="button" (click)="requestQuote()" class="button">Send</button>
+    </form>
+  </div>
+</aside>
