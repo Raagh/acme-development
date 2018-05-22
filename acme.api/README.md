@@ -10,3 +10,8 @@ You need to change the parameters inside the config folder, mail.config.json for
 
 It's a very simple api for the subscribe and get quote functions of acme.web.  
 It simply takes the information of the request and sends a fake email to the recipient.
+
+# RUN
+
+npm install
+npm run start
