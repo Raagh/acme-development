@@ -1,28 +1,33 @@
 import { Injectable } from '@angular/core';
-import { Config } from '../../config.js';
 import { HttpClient } from '@angular/common/http';
+import { AppConfig } from '../../app.config';
+import { Observable } from 'rxjs';
+
+import { MailData } from '../../model/mail-data';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 
 export class ApiService {
 
-  private httpClient: HttpClient;
+    private httpClient: HttpClient;
+    private appConfig: AppConfig;
 
-  constructor(httpClient: HttpClient) {
-    this.httpClient = httpClient;
-  }
+    constructor(appConfig: AppConfig, httpClient: HttpClient) {
+        this.httpClient = httpClient;
+        this.appConfig = appConfig;
+    }
 
-  Subscribe(mail: string): boolean {
+    subscribeToMailingList(mail: string): Observable<boolean> {
+        const mailData = new MailData(mail);
 
+        return this.httpClient.post<boolean>(this.appConfig.subscribeUrl, mailData);
+    }
 
-    return true;
-  }
+    requestQuote(name: string, mail: string, message: string): Observable<boolean> {
+        const mailData = new MailData(mail, name, message);
 
-  RequestQuote(name: string, mail: string, message: string): boolean {
-
-    return true;
-  }
-
+        return this.httpClient.post<boolean>(this.appConfig.quoteUrl, mailData);
+    }
 }

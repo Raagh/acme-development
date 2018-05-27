@@ -2,26 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../../services/api/api.service';
 
 @Component({
-  selector: 'app-newsletter',
-  templateUrl: './newsletter.component.html',
-  styleUrls: ['./newsletter.component.css']
+    selector: 'app-newsletter',
+    templateUrl: './newsletter.component.html',
+    styleUrls: ['./newsletter.component.css']
 })
 
 export class NewsletterComponent implements OnInit {
 
-  private apiService: ApiService;
-  private mail: string;
+    private apiService: ApiService;
+    private mail: string;
 
-  constructor(apiService: ApiService) {
-    this.apiService = apiService;
-  }
+    constructor(apiService: ApiService) {
+        this.apiService = apiService;
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
-  subscribe() {
-    var result = this.apiService.Subscribe(this.mail);
-
-    result && console.log("You have been subscribed to our newsletter");
-  }
+    subscribe() {
+        this.apiService.subscribeToMailingList(this.mail).subscribe((subscribeResult) => {
+            subscribeResult && console.log("You have been subscribed to our newsletter");
+        });
+    }
 }

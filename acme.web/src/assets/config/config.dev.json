@@ -1,0 +1,4 @@
+{
+  "quoteUrl": "localhost:4200/mails/quote",
+  "subscribeUrl": "localhost:4200/mails/quote"
+}

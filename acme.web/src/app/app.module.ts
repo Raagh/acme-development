@@ -17,28 +17,29 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { QuoteComponent } from './components/shared/quote/quote.component';
 
 import { ApiService } from './services/api/api.service';
+import { AppConfig } from './app.config';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ServicesComponent,
-    AboutComponent,
-    HomeComponent,
-    NavComponent,
-    NewsletterComponent,
-    FooterComponent,
-    QuoteComponent
-  ],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
-    AppRoutingModule
-  ],
-  providers: [ApiService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ServicesComponent,
+        AboutComponent,
+        HomeComponent,
+        NavComponent,
+        NewsletterComponent,
+        FooterComponent,
+        QuoteComponent
+    ],
+    imports: [
+        BrowserModule,
+        CommonModule,
+        FormsModule,
+        HttpClientModule,
+        AppRoutingModule
+    ],
+    providers: [AppConfig, ApiService],
+    bootstrap: [AppComponent]
 })
 
 export class AppModule { }
